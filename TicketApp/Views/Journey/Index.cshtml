@@ -1,0 +1,47 @@
+﻿@model TicketApp.Models.Journey.Journey
+
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $("#navbarText").html("@Model.StartPoint - @Model.EndPoint <br/>"+
+        "<span style='font-size:12px;color:white'>@Model.Date</span><br/>");
+    });
+    function GetJourney(originId,destinationId,sessionId,deviceId,date)
+    {
+        window.location.href="/Journey/BusDetail?originId="+originId+"&destinationId="+destinationId+"&sesionId="+sessionId+
+        "&deviceId="+deviceId+"&date="+date;
+    }
+</script>
+
+<div id="hiddens">
+    <input type="hidden" name="startPointText" id="startPointText" />
+    <input type="hidden" name="endPointText" id="endPointText" />
+</div>
+<div class="text-center">
+    @foreach (TicketApp.Models.Journey.JourneyDetail journey in Model.Journeys)
+    {
+        <div class="container containerArea ticketArea" onclick="GetJourney('@journey.OriginId','@journey.DestinationId','@Model.SessionId','@Model.DeviceId','@Model.Date');">
+            <div class="row priceArea">
+                <div class="col-sm-3 col-xs-3 sm3">
+                    <span class="hourText">Kalkış</span>
+                    <p class="hour">@journey.StartHour</p>
+                </div>
+                <div class="col-sm-2 col-xs-2">
+                    <span></span>
+                    <i class='fa fa-arrow-right hour' style="margin-top:22px"></i>
+                </div>
+                <div class="col-sm-3 col-xs-3 sm3">
+                    <span class="hourText">Varış</span>
+                    <p class="hour">@journey.EndHour</p>
+                </div>
+                <div class="col-sm-4 col-xs-4 sm4" style="text-align:right">
+                    <button class="btnPrice">@journey.Price</button>
+                </div>
+            </div>
+            <p style="text-align:left">@journey.StartPoint - @journey.EndPoint</p>
+        </div>
+    }
+</div>

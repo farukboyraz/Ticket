@@ -1,0 +1,128 @@
+﻿body {
+    background: #F3F3F3 !important
+}
+.navbarObilet {
+    background: #2F4EB4 !important;
+    height:75px;
+}
+.containerArea {
+    border: 2px whitesmoke solid !important;
+    padding: 5px;
+    background:white;
+}
+.leftArrow {
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+.ticketArea {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer
+}
+@media(min-width:480px) {
+    .containerArea {
+        width: 40% !important
+    }
+    .ticketArea {
+        margin-left:390px !important;
+    }
+    .sm4 {
+        width: 53.33333% !important;
+    }
+    .sm3{
+        width:15% !important;
+    }
+    .leftArrow {
+        margin-top: -20px;
+    }
+    .hourText {
+        margin-left: 7px
+    }
+}
+@media(max-width:480px) {
+    .title {
+        margin-left: 30px !important;
+    }
+    #btnPost {
+        width: 70% !important;
+    }
+
+    .priceArea {
+        text-align: left;
+    }
+    .hourText{
+        margin-left:9px
+    }
+    .leftArrow {
+        margin-right:450px;
+    }
+}
+.title {
+    color: #2F4EB4 !important;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 36px;
+    font-size:20px;
+}
+i {
+    color: #9D9D9C
+}
+footer{
+    background:white;
+    margin-top:30px;
+    padding:20px
+}
+#btnPost {
+    width: 20%;
+    height: 35px !important;
+    color: white !important;
+    background: #2F4EB4 !important;
+    padding: 4px !important;
+    border-radius: 5px !important;
+}
+select{
+    cursor:pointer
+}
+#navbarText{
+    color:white;
+    text-align:center;
+}
+span {
+    color: #707070;
+    font-size:12px
+}
+span {
+    flex: 1;
+    color: #3640B1;
+    float: right;
+}
+.hour {
+    font-size: 17px;
+    color: #3640B1;
+}
+.btnPrice {
+    height: 50%;
+    background: #D23B38;
+    color: white;
+    border-radius: 5px;
+    pointer-events:none;
+    margin-top:5px;
+}
+.arrowIcons {
+    border-radius: 15px !important;
+    border: 2px solid #5D686E;
+    font-size: 15px;
+    cursor: pointer;
+}
+.iconArrow {
+    color: #5D686E
+}
+select {
+    background-image: none !important;
+    border: 0 !important;
+    font-size: 20px !important;
+    margin-top: -7px !important;
+    margin-left: -12px !important;
+    color: gray !important;
+}
